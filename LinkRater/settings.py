@@ -31,6 +31,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL = 'user:login'
+LOGIN_REDIRECT_URL = 'core:index'
+
 
 # Application definition
 
