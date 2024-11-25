@@ -13,3 +13,8 @@ def add_link(request):
             link =form.save()
 
             return redirect('/')
+    
+    else:
+        form = LinkForm()
+
+    return render(request, 'link/add_link.html', {'form': form})

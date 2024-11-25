@@ -9,6 +9,18 @@ class Link(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_rating(self):
+        if self.reviews.count():
+            total_score =0
+
+            for review in self.reviews:
+                total_score += review
+
+            return total_score/self.reviews.count()
+        else:
+            return 0
+
     
 class Review(models.Model):
     link = models.ForeignKey(Link, related_name='reviews', on_delete=models.CASCADE)
