@@ -34,6 +34,9 @@ ALLOWED_HOSTS = []
 LOGIN_URL = 'user:login'
 LOGIN_REDIRECT_URL = 'core:index'
 
+# LOGOUT_URL = 'user:logout'
+# LOGOUT_REDIRECT_URL = 'user:login'
+
 
 # Application definition
 
