@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ link.name }}{% endblock %}
+
+
+{% block content %}
+    <h1 class="mb-6 text-3xl text-purple-800 font-bold">{{ link.name }}</h1>
+
+    <p   class="text-slate-600"><span class="font-bold">Url:</span>{{ link.url }}</p>
+    <p   class="text-slate-600"><span class="font-bold">Rating:</span>{{ link.get_rating }}</p>
+
+
+    <a href="{% url 'link:add_review' link.pk %}" class="py-4 px-8 inline-block bg-purple-900 rounded-xl text-white mt-3">Add review</a>
+{% endblock %}

@@ -14,12 +14,12 @@ class Link(models.Model):
         if self.reviews.count():
             total_score =0
 
-            for review in self.reviews:
-                total_score += review
+            for review in self.reviews.all():
+                total_score += review.rating 
 
             return total_score/self.reviews.count()
         else:
-            return 0
+            return "No reviews"
 
     
 class Review(models.Model):
