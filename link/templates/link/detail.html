@@ -18,9 +18,9 @@
 
     {% for review in link.reviews.all %}
         <div class="mb-y py-4 px-6 bg-purple-100">
-            <h3 class="font-bold text-purple-800">{{ review.username }}</h3>
+            <h3 class="text-xl font-bold text-purple-800">{{ review.user.username }}</h3>
 
-            <p class="mt-4"><span class="font-bold">Rating: </span>{{ review.rating }}</p>
+            <p class="mt-4 text-xs"><span class="font-bold">Rating: </span>{{ review.rating }}</p>
 
             <p class="mt-6">{{ review.content }}</p>
         </div>
